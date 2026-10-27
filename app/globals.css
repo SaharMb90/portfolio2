@@ -177,6 +177,17 @@ a{color:inherit;text-decoration:none}
   .repo{justify-self:start}
 }
 
+/* ---------- frontend work ---------- */
+.fe-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.fe-card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:12px;
+  padding:22px;background:var(--panel);transition:border-color .25s,box-shadow .25s}
+.fe-card:hover{border-color:var(--neon);box-shadow:0 0 22px var(--neon-wash)}
+.fe-card h3{font-family:var(--display);font-weight:600;font-size:1.1rem;margin:0 0 8px}
+.app.rtl .fe-card h3{font-family:var(--fa)}
+.fe-card p.desc{color:var(--ink);margin:0 0 14px;font-size:.93rem;flex:1}
+.fe-links{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.repo.on{color:var(--neon);border-color:var(--neon)}
+
 /* ---------- experience timeline ---------- */
 .timeline{position:relative;margin-inline-start:6px;padding-inline-start:34px}
 .timeline::before{content:"";position:absolute;inset-inline-start:6px;top:6px;bottom:6px;width:1px;

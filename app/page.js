@@ -15,6 +15,17 @@ const REPOS = [
   'https://github.com/SaharMb90/Cognitive_Synchronization_System_Extension',
 ];
 
+const FRONTEND = [
+  { demo: 'https://magic-shop-teal.vercel.app', code: 'https://github.com/SaharMb90/magicShop', chips: ['Next.js', 'TypeScript', 'i18n · FA/EN/TR', 'RTL/LTR'] },
+  { demo: 'https://crypto-pulse-chi-flax.vercel.app', code: 'https://github.com/SaharMb90/crypto--pulse', chips: ['Next.js', 'live API', 'RSS', 'EN/FA'] },
+  { demo: 'https://simple-store-using-vue-js-nuxt-js-5.vercel.app', code: 'https://github.com/SaharMb90/Simple_Store_Using_Vue.js-Nuxt.js', chips: ['Nuxt 3', 'Vue', 'Pinia'] },
+  { demo: 'https://online-shop-using-next-and-type-scr.vercel.app', code: null, chips: ['Next.js', 'TypeScript'] },
+  { demo: 'https://onlineshop-using-react-js-qlm8.vercel.app', code: 'https://github.com/SaharMb90/Onlineshop_Using_React.js', chips: ['React', 'React Router'] },
+  { demo: 'https://online-shop-with-react-js-fire-base-realtime-database.vercel.app', code: 'https://github.com/SaharMb90/Online_Shop_With_React.js-FireBase-Realtime-Database', chips: ['React', 'Firebase'] },
+  { demo: 'https://nft-oline-shop-with-react.vercel.app', code: 'https://github.com/SaharMb90/NFT_OlineShop_With_React', chips: ['React', 'MUI', 'Swiper'] },
+  { demo: 'https://angularjsshop.vercel.app', code: 'https://github.com/SaharMb90/Angularjs_shop', chips: ['AngularJS', 'Tailwind'] },
+];
+
 const T = {
   en: {
     nav: { projects: 'Projects', experience: 'Experience', contact: 'Contact' },
@@ -58,6 +69,18 @@ const T = {
           'Reads passive interaction and response patterns to help a user hold their focus — a small, practical take on keeping a person inside the loop.',
         chips: ['JavaScript', 'behavioural signals', 'HITL'],
       },
+    ],
+    secFrontend: 'Frontend work — live demos',
+    liveDemo: 'Live demo',
+    fe: [
+      { title: 'Magic Bazaar', desc: 'Trilingual storefront (Persian, English, Turkish) with full RTL/LTR switching, search, filters, stock and cart on a mock API.' },
+      { title: 'Crypto Pulse', desc: 'Bilingual crypto dashboard: live prices, aggregated market news, rule-based technical signals and a self-scoring track record.' },
+      { title: 'Nova Store', desc: 'Nuxt 3 + Pinia shop with product pages, cart and checkout, mock auth, wallet and an admin panel.' },
+      { title: 'Next.js Online Shop', desc: 'Online shop built with Next.js and TypeScript.' },
+      { title: 'Lavender Shop', desc: 'Responsive React storefront rebuilt as clean components with routing and mock authentication.' },
+      { title: 'React + Firebase Shop', desc: 'React online shop backed by Firebase Realtime Database.' },
+      { title: 'NFT Marketplace', desc: 'NFT shop UI in React with Material UI and carousels.' },
+      { title: 'Zenith Store', desc: 'Single-page AngularJS storefront with catalogue search, category filters and a working cart.' },
     ],
     secExperience: 'Experience',
     exp: [
@@ -148,6 +171,18 @@ const T = {
           'الگوهای تعامل و پاسخِ کاربر را به‌صورت غیرفعال می‌خواند تا به حفظ تمرکز کمک کند — نگاهی کوچک و کاربردی به نگه‌داشتنِ انسان درون حلقه.',
         chips: ['JavaScript', 'سیگنال رفتاری', 'HITL'],
       },
+    ],
+    secFrontend: 'نمونه‌کارهای فرانت‌اند — دموی زنده',
+    liveDemo: 'دموی زنده',
+    fe: [
+      { title: 'بازار سحر (Magic Bazaar)', desc: 'فروشگاه سه‌زبانه (فارسی، انگلیسی، ترکی) با جابه‌جایی کامل RTL/LTR، جست‌وجو، فیلتر، موجودی و سبد خرید روی Mock API.' },
+      { title: 'کریپتو پالس', desc: 'داشبورد دوزبانهٔ کریپتو: قیمت لحظه‌ای، اخبار بازار، سیگنال‌های فنیِ قاعده‌محور و سابقهٔ عملکردِ خودسنج.' },
+      { title: 'Nova Store', desc: 'فروشگاه با Nuxt 3 و Pinia: صفحهٔ محصول، سبد و پرداخت، احراز هویت آزمایشی، کیف پول و پنل مدیریت.' },
+      { title: 'فروشگاه Next.js', desc: 'فروشگاه آنلاین با Next.js و TypeScript.' },
+      { title: 'Lavender Shop', desc: 'فروشگاه واکنش‌گرا با React، مسیریابی و احراز هویت آزمایشی.' },
+      { title: 'فروشگاه React + Firebase', desc: 'فروشگاه آنلاین React با پایگاه‌دادهٔ Firebase Realtime.' },
+      { title: 'مارکت NFT', desc: 'رابط فروشگاه NFT با React، Material UI و اسلایدر.' },
+      { title: 'Zenith Store', desc: 'فروشگاه تک‌صفحه‌ای با AngularJS؛ جست‌وجو، فیلتر دسته‌بندی و سبد خرید.' },
     ],
     secExperience: 'تجربه',
     exp: [
@@ -353,10 +388,35 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="section" id="experience">
+      <section className="section" id="frontend">
         <div className="wrap">
           <div className="sec-head">
             <span className="sec-idx">02</span>
+            <h2>{t.secFrontend}</h2>
+            <span className="sec-line" />
+          </div>
+          <div className="fe-grid">
+            {FRONTEND.map((f, i) => (
+              <article className="fe-card" key={i}>
+                <h3>{t.fe[i].title}</h3>
+                <p className="desc">{t.fe[i].desc}</p>
+                <div className="chips">
+                  {f.chips.map((c, j) => <span className="chip" key={j}>{c}</span>)}
+                </div>
+                <div className="fe-links">
+                  <a className="repo on" href={f.demo} target="_blank" rel="noopener noreferrer">{t.liveDemo}</a>
+                  {f.code && <a className="repo" href={f.code} target="_blank" rel="noopener noreferrer">{t.viewCode}</a>}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section" id="experience">
+        <div className="wrap">
+          <div className="sec-head">
+            <span className="sec-idx">03</span>
             <h2>{t.secExperience}</h2>
             <span className="sec-line" />
           </div>
@@ -375,7 +435,7 @@ export default function Page() {
       <section className="section" id="skills">
         <div className="wrap">
           <div className="sec-head">
-            <span className="sec-idx">03</span>
+            <span className="sec-idx">04</span>
             <h2>{t.secToolkit}</h2>
             <span className="sec-line" />
           </div>
@@ -393,7 +453,7 @@ export default function Page() {
       <section className="section" id="education">
         <div className="wrap">
           <div className="sec-head">
-            <span className="sec-idx">04</span>
+            <span className="sec-idx">05</span>
             <h2>{t.secEducation}</h2>
             <span className="sec-line" />
           </div>
