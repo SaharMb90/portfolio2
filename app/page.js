@@ -30,7 +30,6 @@ const UX = [
   { proto: 'https://www.figma.com/proto/wQLO0sHz2pT07BN4Dcn9WT/Untitled?node-id=1048-240', img: '/ux/ux1.png' },
   { proto: 'https://www.figma.com/proto/wQLO0sHz2pT07BN4Dcn9WT/Untitled?node-id=0-1', img: '/ux/ux2.png' },
   { proto: 'https://www.figma.com/proto/wQLO0sHz2pT07BN4Dcn9WT/Untitled?node-id=1021-2', img: '/ux/ux3.png' },
-  { proto: 'https://www.figma.com/proto/TWKrO8w0BecQLbUEcvA9kc/Untitled?node-id=0-1', img: '/ux/ux4.png' },
   { proto: 'https://www.figma.com/proto/p96dOGQSkzgMEadxUFGkqx/Untitled?node-id=0-1', img: '/ux/hiltiran.png' },
 ];
 
@@ -92,7 +91,12 @@ const T = {
     ],
     secUx: 'UX / UI design — Figma prototypes',
     openProto: 'Open prototype',
-    ux: ['UX Design 1', 'UX Design 2', 'UX Design 3', 'UX Design 4', 'HiltIran — product UX'],
+    ux: [
+      { title: 'UX Design 1', desc: 'Gold & jewellery store' },
+      { title: 'UX Design 2', desc: 'Real-estate agency' },
+      { title: 'UX Design 3', desc: 'Metal engraving service' },
+      { title: 'HiltIran', desc: 'Ordering platform for concrete orders and lab workflows.' },
+    ],
     secExperience: 'Experience',
     exp: [
       {
@@ -197,7 +201,12 @@ const T = {
     ],
     secUx: 'طراحی UX / UI — پروتوتایپ‌های فیگما',
     openProto: 'دیدن پروتوتایپ',
-    ux: ['طراحی UX ۱', 'طراحی UX ۲', 'طراحی UX ۳', 'طراحی UX ۴', 'هیلت‌ایران — UX محصول'],
+    ux: [
+      { title: 'طراحی UX ۱', desc: 'فروشگاه طلا و جواهر' },
+      { title: 'طراحی UX ۲', desc: 'مشاور املاک' },
+      { title: 'طراحی UX ۳', desc: 'حکاکی روی فلزات' },
+      { title: 'هیلت‌ایران', desc: 'پلتفرم ثبت سفارش بتن و مدیریت فرایندهای آزمایشگاه.' },
+    ],
     secExperience: 'تجربه',
     exp: [
       {
@@ -438,10 +447,11 @@ export default function Page() {
             {UX.map((u, i) => (
               <a className="fe-card ux-card" key={i} href={u.proto} target="_blank" rel="noopener noreferrer">
                 <div className="ux-thumb">
-                  <img src={u.img} alt={t.ux[i]} loading="lazy" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+                  <img src={u.img} alt={t.ux[i].title} loading="lazy" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                   <span className="ux-ph">Figma</span>
                 </div>
-                <h3>{t.ux[i]}</h3>
+                <h3>{t.ux[i].title}</h3>
+                <p className="desc">{t.ux[i].desc}</p>
                 <span className="repo on">{t.openProto}</span>
               </a>
             ))}
