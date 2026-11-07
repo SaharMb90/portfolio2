@@ -251,3 +251,11 @@ a{color:inherit;text-decoration:none}
 .app.rtl .foot-inner{font-family:var(--fa)}
 
 :focus-visible{outline:2px solid var(--neon);outline-offset:3px;border-radius:4px}
+
+/* UX / Figma cards */
+.ux-card{text-decoration:none;color:inherit}
+.ux-card .repo{align-self:flex-start;margin-top:12px}
+.ux-thumb{position:relative;aspect-ratio:16/10;border-radius:8px;overflow:hidden;margin-bottom:14px;
+  background:var(--neon-wash);border:1px solid var(--line);display:grid;place-items:center}
+.ux-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;z-index:1}
+.ux-ph{font-family:var(--mono);color:var(--muted);font-size:.85rem}

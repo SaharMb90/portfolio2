@@ -26,6 +26,14 @@ const FRONTEND = [
   { demo: 'https://angularjsshop.vercel.app', code: 'https://github.com/SaharMb90/Angularjs_shop', chips: ['AngularJS', 'Tailwind'] },
 ];
 
+const UX = [
+  { proto: 'https://www.figma.com/proto/wQLO0sHz2pT07BN4Dcn9WT/Untitled?node-id=1048-240', img: '/ux/ux1.png' },
+  { proto: 'https://www.figma.com/proto/wQLO0sHz2pT07BN4Dcn9WT/Untitled?node-id=0-1', img: '/ux/ux2.png' },
+  { proto: 'https://www.figma.com/proto/wQLO0sHz2pT07BN4Dcn9WT/Untitled?node-id=1021-2', img: '/ux/ux3.png' },
+  { proto: 'https://www.figma.com/proto/TWKrO8w0BecQLbUEcvA9kc/Untitled?node-id=0-1', img: '/ux/ux4.png' },
+  { proto: 'https://www.figma.com/proto/p96dOGQSkzgMEadxUFGkqx/Untitled?node-id=0-1', img: '/ux/hiltiran.png' },
+];
+
 const T = {
   en: {
     nav: { projects: 'Projects', experience: 'Experience', contact: 'Contact' },
@@ -82,6 +90,9 @@ const T = {
       { title: 'NFT Marketplace', desc: 'NFT shop UI in React with Material UI and carousels.' },
       { title: 'Zenith Store', desc: 'Single-page AngularJS storefront with catalogue search, category filters and a working cart.' },
     ],
+    secUx: 'UX / UI design — Figma prototypes',
+    openProto: 'Open prototype',
+    ux: ['UX Design 1', 'UX Design 2', 'UX Design 3', 'UX Design 4', 'HiltIran — product UX'],
     secExperience: 'Experience',
     exp: [
       {
@@ -184,6 +195,9 @@ const T = {
       { title: 'مارکت NFT', desc: 'رابط فروشگاه NFT با React، Material UI و اسلایدر.' },
       { title: 'Zenith Store', desc: 'فروشگاه تک‌صفحه‌ای با AngularJS؛ جست‌وجو، فیلتر دسته‌بندی و سبد خرید.' },
     ],
+    secUx: 'طراحی UX / UI — پروتوتایپ‌های فیگما',
+    openProto: 'دیدن پروتوتایپ',
+    ux: ['طراحی UX ۱', 'طراحی UX ۲', 'طراحی UX ۳', 'طراحی UX ۴', 'هیلت‌ایران — UX محصول'],
     secExperience: 'تجربه',
     exp: [
       {
@@ -413,10 +427,32 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="section" id="experience">
+      <section className="section" id="ux">
         <div className="wrap">
           <div className="sec-head">
             <span className="sec-idx">03</span>
+            <h2>{t.secUx}</h2>
+            <span className="sec-line" />
+          </div>
+          <div className="fe-grid">
+            {UX.map((u, i) => (
+              <a className="fe-card ux-card" key={i} href={u.proto} target="_blank" rel="noopener noreferrer">
+                <div className="ux-thumb">
+                  <img src={u.img} alt={t.ux[i]} loading="lazy" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+                  <span className="ux-ph">Figma</span>
+                </div>
+                <h3>{t.ux[i]}</h3>
+                <span className="repo on">{t.openProto}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section" id="experience">
+        <div className="wrap">
+          <div className="sec-head">
+            <span className="sec-idx">04</span>
             <h2>{t.secExperience}</h2>
             <span className="sec-line" />
           </div>
@@ -435,7 +471,7 @@ export default function Page() {
       <section className="section" id="skills">
         <div className="wrap">
           <div className="sec-head">
-            <span className="sec-idx">04</span>
+            <span className="sec-idx">05</span>
             <h2>{t.secToolkit}</h2>
             <span className="sec-line" />
           </div>
@@ -453,7 +489,7 @@ export default function Page() {
       <section className="section" id="education">
         <div className="wrap">
           <div className="sec-head">
-            <span className="sec-idx">05</span>
+            <span className="sec-idx">06</span>
             <h2>{t.secEducation}</h2>
             <span className="sec-line" />
           </div>
