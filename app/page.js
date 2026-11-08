@@ -16,6 +16,7 @@ const REPOS = [
 ];
 
 const FRONTEND = [
+  { demo: 'https://vr-coursework-for-my-m-sc-virtual-reality-module.vercel.app', code: 'https://github.com/SaharMb90/VR-Coursework-for-my-MSc-Virtual-Reality-Module', chips: ['React Three Fiber', 'Three.js', 'WebXR / VR', 'Vite'] },
   { demo: 'https://magic-shop-teal.vercel.app', code: 'https://github.com/SaharMb90/magicShop', chips: ['Next.js', 'TypeScript', 'i18n · FA/EN/TR', 'RTL/LTR'] },
   { demo: 'https://crypto-pulse-chi-flax.vercel.app', code: 'https://github.com/SaharMb90/crypto--pulse', chips: ['Next.js', 'live API', 'RSS', 'EN/FA'] },
   { demo: 'https://simple-store-using-vue-js-nuxt-js-5.vercel.app', code: 'https://github.com/SaharMb90/Simple_Store_Using_Vue.js-Nuxt.js', chips: ['Nuxt 3', 'Vue', 'Pinia'] },
@@ -80,6 +81,7 @@ const T = {
     secFrontend: 'Frontend work — live demos',
     liveDemo: 'Live demo',
     fe: [
+      { title: 'Virtual Reality Scene', desc: 'MSc Virtual Reality coursework: an interactive 3D scene built with React Three Fiber, explorable in the browser. The 3D model is large, so the first load takes a moment.' },
       { title: 'Magic Bazaar', desc: 'Trilingual storefront (Persian, English, Turkish) with full RTL/LTR switching, search, filters, stock and cart on a mock API.' },
       { title: 'Crypto Pulse', desc: 'Bilingual crypto dashboard: live prices, aggregated market news, rule-based technical signals and a self-scoring track record.' },
       { title: 'Nova Store', desc: 'Nuxt 3 + Pinia shop with product pages, cart and checkout, mock auth, wallet and an admin panel.' },
@@ -190,6 +192,7 @@ const T = {
     secFrontend: 'نمونه‌کارهای فرانت‌اند — دموی زنده',
     liveDemo: 'دموی زنده',
     fe: [
+      { title: 'صحنهٔ واقعیت مجازی (VR)', desc: 'پروژهٔ درس واقعیت مجازی کارشناسی ارشد: صحنهٔ سه‌بعدی تعاملی با React Three Fiber که در مرورگر قابل گشت‌وگذار است. مدل سه‌بعدی حجیم است، پس بار اول کمی طول می‌کشد.' },
       { title: 'بازار سحر (Magic Bazaar)', desc: 'فروشگاه سه‌زبانه (فارسی، انگلیسی، ترکی) با جابه‌جایی کامل RTL/LTR، جست‌وجو، فیلتر، موجودی و سبد خرید روی Mock API.' },
       { title: 'کریپتو پالس', desc: 'داشبورد دوزبانهٔ کریپتو: قیمت لحظه‌ای، اخبار بازار، سیگنال‌های فنیِ قاعده‌محور و سابقهٔ عملکردِ خودسنج.' },
       { title: 'Nova Store', desc: 'فروشگاه با Nuxt 3 و Pinia: صفحهٔ محصول، سبد و پرداخت، احراز هویت آزمایشی، کیف پول و پنل مدیریت.' },
